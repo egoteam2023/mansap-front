@@ -1,7 +1,9 @@
+import { Hero } from '@/components/home-page/Hero'
+
 export default function Home() {
   return (
     <main>
-      <h1>Hero</h1>
+      <Hero />
       <h1>Конференц залы</h1>
       <h1>О НАС</h1>
       <h1>ЧТО МЫ ПРЕДЛАГАЕМ?</h1>

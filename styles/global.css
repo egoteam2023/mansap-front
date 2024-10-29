@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Variables */
 :root {
   --fontSize-xs: 0.75rem;
