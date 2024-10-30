@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Конференц залы",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ",
+    "image": "/services.png"
+  },
+  {
+    "id": 2,
+    "title": "Отдельный ресепшн",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+    "image": "/services.png"
+  },
+  {
+    "id": 3,
+    "title": "Безопасность",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+    "image": "/services.png"
+  },
+  {
+    "id": 4,
+    "title": "Камера хранения",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+    "image": "/services.png"
+  },
+  {
+    "id": 5,
+    "title": "Целый этаж премиальных личный кабинетов",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+    "image": "/services.png"
+  }
+]

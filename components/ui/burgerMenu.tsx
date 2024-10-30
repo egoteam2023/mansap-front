@@ -1,17 +1,15 @@
 'use client'
 import Link from 'next/link'
-import React, { Dispatch, SetStateAction } from 'react'
+import React, { useState } from 'react'
 import Button from './button'
 
 export function BurgerMenu({
   className,
-  isOpenMenu,
-  setIsOpenMenu,
 }: {
   className: string
-  isOpenMenu: boolean
-  setIsOpenMenu: Dispatch<SetStateAction<boolean>>
 }) {
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
+
   return (
     <>
       <div
@@ -35,7 +33,7 @@ export function BurgerMenu({
 export function BurgerOverlay({ isOpenMenu }: { isOpenMenu: boolean }) {
   return (
     <div
-      className={`fixed top-0 backdrop-blur-md left-0 w-full h-screen flex items-center justify-center ${isOpenMenu ? 'animate-leftShow' : 'animate-leftHide'}`}
+      className={`fixed top-0 backdrop-blur-2xl bg-black/40 left-0 duration-300 overflow-hidden h-screen flex items-center z-10 justify-center ${isOpenMenu ? 'w-full' : 'w-0'}`}
     >
       <nav className="flex flex-col items-center gap-10">
         <Link

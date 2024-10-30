@@ -7,8 +7,8 @@ const Button = forwardRef<HTMLButtonElement, IButtonProp>(
   ({ className, variant, children, ...props }, ref) => {
     const generateStyle = useMemo(() => {
       switch (variant) {
-        case 'primary':
-          return 'bg-slate-200 text-white'
+        case 'primary-yellow':
+          return 'bg-yellow py-5 px-10 font-semibold hover:bg-yellow/70 text-black'
         default:
           return 'bg-slate-200 text-black hover:bg-slate-200/80'
       }

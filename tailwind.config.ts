@@ -19,9 +19,11 @@ const config: Config = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        header: '#111111',
+        yellow: '#F8BE00',
       },
       fontSize: {
-        xs: '11px',
+        xs: '12px',
         sm: '14px',
         base: '16px',
         lg: '18px',
