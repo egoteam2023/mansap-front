@@ -5,27 +5,11 @@ import { useEffect, useState } from 'react'
 import { BurgerMenu } from '../ui/burgerMenu'
 
 export function Header() {
-  const [isOpenMenu, setIsOpenMenu] = useState(false)
-  const [isVisible, setIsVisible] = useState(true)
-  const [prevScrollPos, setPrevScrollPos] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY
-      setIsVisible(
-        prevScrollPos > currentScrollPos ||
-          currentScrollPos < (window.innerWidth < 768 ? 20 : 40),
-      )
-      setPrevScrollPos(currentScrollPos)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [prevScrollPos])
+  
 
   return (
     <header
-      className={`fixed h-20 left-1/2 -translate-x-1/2 container flex items-center justify-between py-4 duration-500 bg-black border-b ${isVisible ? 'top-0' : '-top-52'}`}
+      className={`fixed h-20 left-1/2 -translate-x-1/2 px-5 w-full flex items-center justify-between py-4 duration-500 bg-header shadow-md  z-10`}
     >
       <div className="text-xl font-bold cursor-default text-slate-200">
         Logo
@@ -55,8 +39,6 @@ export function Header() {
       </nav>
       <BurgerMenu
         className="sm:hidden"
-        isOpenMenu={isOpenMenu}
-        setIsOpenMenu={setIsOpenMenu}
       />
     </header>
   )
