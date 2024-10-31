@@ -3,6 +3,7 @@ import Gallery from '@/components/gallery/Gallery'
 import { Hero } from '@/components/home-page/Hero'
 import OurProducts from '@/components/our-products/OurProducts'
 import Services from '@/components/services/Services'
+import Founders from '@/components/founders/Founders'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Services/>
       <Gallery/>
+      <Founders />
       <OurProducts/>
       <Feedback/>
       <h1>О НАС</h1>

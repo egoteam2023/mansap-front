@@ -1,7 +1,7 @@
 'use client'
 import Slider from 'react-slick'
 import galleryList from './data.json'
-import { IGallery } from './type'
+import { IGallery } from '../../type'
 import GalleryCard from './GalleryCard'
 import { useRef } from 'react'
 
