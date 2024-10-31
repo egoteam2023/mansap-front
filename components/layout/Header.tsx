@@ -1,19 +1,18 @@
 'use client'
 import Link from 'next/link'
 import Button from '../ui/button'
-import { useEffect, useState } from 'react'
 import { BurgerMenu } from '../ui/burgerMenu'
+import Image from 'next/image'
+import logo from '@/assets/logo.svg'
 
 export function Header() {
-  
-
   return (
     <header
       className={`fixed h-20 left-1/2 -translate-x-1/2 px-5 w-full flex items-center justify-between py-4 duration-500 bg-header shadow-md  z-10`}
     >
-      <div className="text-xl font-bold cursor-default text-slate-200">
-        Logo
-      </div>
+      <Link href="#hero">
+        <Image src={logo} alt="mansap" width={140} height={36} />
+      </Link>
       <nav className="max-sm:hidden flex items-center gap-10">
         <Link
           className="text-sm text-slate-200 hover:text-slate-200/80 duration-300"
@@ -37,9 +36,7 @@ export function Header() {
           <Button>Контакты</Button>
         </Link>
       </nav>
-      <BurgerMenu
-        className="sm:hidden"
-      />
+      <BurgerMenu className="sm:hidden" />
     </header>
   )
 }

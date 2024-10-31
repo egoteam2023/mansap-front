@@ -1,6 +1,6 @@
-import { forwardRef, HTMLAttributes, useCallback, useMemo } from 'react'
+import { ButtonHTMLAttributes, forwardRef,  useMemo } from 'react'
 
-interface IButtonProp extends HTMLAttributes<HTMLButtonElement> {
+interface IButtonProp extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: string
 }
 const Button = forwardRef<HTMLButtonElement, IButtonProp>(

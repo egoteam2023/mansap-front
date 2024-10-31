@@ -29,11 +29,35 @@ const config: Config = {
         lg: '18px',
         md: '20px',
         xl: '24px',
-        '2xl': '28px',
-        '3xl': '30px',
-        '4xl': '32px',
+        '2xl': '26px',
+        '3xl': [
+          '36px',
+          {
+            lineHeight: '1.2',
+          },
+        ],
+        '4xl': [
+          '48px',
+          {
+            lineHeight: '1.2',
+          },
+        ],
+        '5xl': [
+          '56px',
+          {
+            lineHeight: '1.4',
+          },
+        ],
+        '6xl': [
+          '62px',
+          {
+            lineHeight: '1.5',
+          },
+        ],
       },
       height: {
+        custom460: '460px',
+        custom200: '200px',
         'icon-sm': 'var(--icon-fontSize-sm)',
         'icon-md': 'var(--icon-fontSize-md)',
         'icon-lg': 'var(--icon-fontSize-lg)',
@@ -43,10 +67,18 @@ const config: Config = {
         'hero-lg': '650px',
       },
       width: {
+        custom300: '300px',
+        custom400: '400px',
+        custom500: '500px',
+        custom600: '600px',
+        custom200: '200px',
         'icon-sm': 'var(--icon-fontSize-sm)',
         'icon-md': 'var(--icon-fontSize-md)',
         'icon-lg': 'var(--icon-fontSize-lg)',
         'icon-xl': 'var(--icon-fontSize-xl)',
+      },
+      maxWidth: {
+        custom600: '600px',
       },
       container: {
         center: true,
