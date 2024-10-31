@@ -4,9 +4,3 @@ export interface IGallery {
   title: string
   description: string
 }
-
-export interface IFounder {
-  id: number
-  image: string
-  description: string 
-}
