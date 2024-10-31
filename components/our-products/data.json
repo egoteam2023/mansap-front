@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "image": "/gallery1.png",
+    "title": "Название"
+  },
+  {
+    "id": 2,
+    "image": "/gallery1.png",
+    "title": "Название"
+  },
+  {
+    "id": 3,
+    "image": "/gallery1.png",
+    "title": "Название"
+  },
+  {
+    "id": 4,
+    "image": "/gallery1.png",
+    "title": "Название"
+  }
+]
