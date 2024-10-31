@@ -1,5 +1,5 @@
 import React from 'react'
-import { IGallery } from '@/type';
+import { IGallery } from './type';
 
 function GalleryCard({ gallery, idx }: { gallery: IGallery; idx: number }) {
   return (

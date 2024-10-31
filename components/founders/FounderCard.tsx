@@ -1,4 +1,4 @@
-import { IFounder } from "@/type"
+import { IFounder } from "./types"
 
 function FounderCard({ image, description }: IFounder) {
   return (
