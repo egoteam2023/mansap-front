@@ -1,22 +1,42 @@
 [
   {
     "id": 1,
-    "image": "/gallery1.png",
-    "title": "Название"
+    "image": "/gallery4.png",
+    "title": "Жилой комплекс «Гармония»"
   },
   {
     "id": 2,
-    "image": "/gallery1.png",
-    "title": "Название"
+    "image": "/gallery3.png",
+    "title": "Офисный центр «Альянс»"
   },
   {
     "id": 3,
-    "image": "/gallery1.png",
-    "title": "Название"
+    "image": "/gallery2.png",
+    "title": "Апартаменты «Солнечный берег»"
   },
   {
     "id": 4,
     "image": "/gallery1.png",
-    "title": "Название"
+    "title": "Многофункциональный комплекс «Престиж»"
+  },
+  {
+    "id": 5,
+    "image": "/gallery4.png",
+    "title": "Торговый центр «Ривьера»"
+  },
+  {
+    "id": 6,
+    "image": "/gallery3.png",
+    "title": "Деловой квартал «Сити»"
+  },
+  {
+    "id": 7,
+    "image": "/gallery2.png",
+    "title": "Резиденция «Золотой Век»"
+  },
+  {
+    "id": 8,
+    "image": "/gallery1.png",
+    "title": "Жилой район «Зеленый парк»"
   }
 ]
