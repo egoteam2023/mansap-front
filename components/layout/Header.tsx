@@ -33,7 +33,7 @@ export function Header() {
           О создателях
         </Link>
         <Link href="#feedback">
-          <Button>Контакты</Button>
+          <Button variant='primary-yellow'>Контакты</Button>
         </Link>
       </nav>
       <BurgerMenu className="sm:hidden" />

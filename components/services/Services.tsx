@@ -30,6 +30,7 @@ function Services() {
           ref={(slider) => {
             sliderRef.current = slider
           }}
+          className='!h-auto'
           {...settings}
         >
           {(servicesList as IService[]).map((service) => (

@@ -7,17 +7,13 @@ import Founders from '@/components/founders/Founders'
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <Hero />
       <Services/>
       <Gallery/>
       <Founders />
       <OurProducts/>
       <Feedback/>
-      <h1>О НАС</h1>
-      <h1>ЧТО МЫ ПРЕДЛАГАЕМ?</h1>
-      <h1>ОТ СОЗДАТЕЛЕЙ</h1>
-      <h1>ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</h1>
     </main>
   )
 }
