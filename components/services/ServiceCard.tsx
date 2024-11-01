@@ -28,7 +28,7 @@ function ServiceCard({ service }: { service: IService }) {
                 Что мы предлагаем?
               </h2>
               <h3 className="mb-7 text-5xl leading-tight font-bold">{service.title}</h3>
-              <p className="mb-8 text-xs font-light">{service.description}</p>
+              <p className="mb-8 text-base font-light">{service.description}</p>
               <Button variant="primary-yellow" className="">
                 Узнать подробнее
               </Button>
