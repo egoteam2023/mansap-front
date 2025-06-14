@@ -10,6 +10,10 @@ function Gallery() {
 
   const settings = {
     infinite: false,
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
     speed: 500,
     slidesToShow: 3.4,
     slidesToScroll: 3.4,

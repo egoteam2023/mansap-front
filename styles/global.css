@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  background: url('../assets/background.jpg') center center/cover no-repeat;
+  background: #000;
   height: 100%;
 }
 
@@ -122,5 +122,5 @@ body {
 }
 
 .slider-container .gallery-item {
-  padding-right: 8px; 
+  padding-right: 8px;
 }

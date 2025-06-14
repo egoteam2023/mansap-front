@@ -9,11 +9,13 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Services/>
-      <Gallery/>
-      <Founders />
-      <OurProducts/>
-      <Feedback/>
+      <Services />
+      <Gallery />
+      <section className="bg-white mt-[60px] lg:mt-[80px] py-20">
+        <Founders />
+      </section>
+      {/* <OurProducts/> */}
+      <Feedback />
     </main>
   )
 }
