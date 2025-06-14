@@ -1,6 +1,6 @@
 import Feedback from '@/components/feedback/Feedback'
 import Gallery from '@/components/gallery/Gallery'
-import { Hero } from '@/components/home-page/Hero'
+import { Hero } from '@/components/hero/Hero'
 import OurProducts from '@/components/our-products/OurProducts'
 import Services from '@/components/services/Services'
 import Founders from '@/components/founders/Founders'
