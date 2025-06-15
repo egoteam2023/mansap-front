@@ -1,31 +1,57 @@
 'use client'
-import React, { useRef } from 'react'
-import Slider from 'react-slick'
-import type { IService } from './type'
-import servicesList from './data.json'
-import ServiceCard from './ServiceCard'
-import leftIcon from '@/assets/arrowLeft.svg'
-import rightIcon from '@/assets/arrowRight.svg'
+import { useRef } from 'react'
 import Image from 'next/image'
+import styles from './service.module.scss'
+import { Carousel } from 'antd'
+import { CarouselRef } from 'antd/es/carousel'
+import { servicesData } from './services.data'
 
 function Services() {
-  let sliderRef = useRef<Slider | null>(null)
-  const next = () => {
-    sliderRef.current?.slickNext()
-  }
-  const previous = () => {
-    sliderRef.current?.slickPrev()
-  }
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+  const carouselRef = useRef<CarouselRef>(null)
+  const goToNext = () => {
+    carouselRef.current?.next()
   }
 
   return (
     <section>
-      <div className="slider-container relative overflow-hidden">
+      <Carousel
+        ref={carouselRef}
+        arrows={false}
+        dotPosition="bottom"
+        dots={false}
+        autoplay={true}
+        draggable={false}
+        autoplaySpeed={3500}
+        speed={1000}
+        infinite={true}
+      >
+        {servicesData.map((item, index) => (
+          <div key={`service_${index}`}>
+            <div
+              style={{
+                background: `url('${item.image}') center center / cover no-repeat`,
+              }}
+              className={styles.serviceSlider}
+            >
+              <div className={styles.serviceSliderText}>
+                <p className={styles.serviceSliderTitle}>{item.title}</p>
+                <p className={styles.serviceSliderDescription}>
+                  {item.description}
+                </p>
+              </div>
+              <button
+                onClick={goToNext}
+                className={styles.serviceSliderNextBtn}
+              />
+            </div>
+          </div>
+        ))}
+      </Carousel>
+    </section>
+  )
+}
+{
+  /* <div className="slider-container relative overflow-hidden">
         <Slider
           ref={(slider) => {
             sliderRef.current = slider
@@ -60,9 +86,6 @@ function Services() {
             <Image src={leftIcon} alt="next" width={30} height={30} />
           </button>
         </div>
-      </div>
-    </section>
-  )
+      </div> */
 }
-
 export default Services
