@@ -1,0 +1,47 @@
+.service {
+  &Slider {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    padding-left: clamp(30px, 10vw, 300px);
+    padding-right: clamp(30px, 10vw, 300px);
+    padding-top: clamp(30px, 15vw, 300px);
+    &Text {
+      padding: 20px;
+      display: inline-block;
+      background: rgba(255, 255, 255, 25%);
+      backdrop-filter: blur(10px);
+    }
+    &Title {
+      max-width: 680px;
+      margin-bottom: 24px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 59px;
+      letter-spacing: 0.03em;
+      color: #000000;
+    }
+    &Description {
+      max-width: 680px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: 0.03em;
+      color: #000000;
+    }
+    &NextBtn {
+      position: absolute;
+      bottom: 10%;
+      right: 10%;
+      width: 0;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-left: 60px solid #822122;
+    }
+  }
+}
