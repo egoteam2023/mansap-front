@@ -21,6 +21,11 @@ const config: Config = {
         foreground: 'var(--foreground)',
         header: '#111111',
         yellow: '#F8BE00',
+        red: 'linear-gradient(261.42deg, #FF5353 -6.48%, #2F2F2F 101.92%)'
+      },
+      fontFamily: {
+        manrope: ['var(--font-manrope)', 'sans-serif'],
+        philosopher: ['var(--font-philosopher)', 'serif'],
       },
       fontSize: {
         xs: '12px',

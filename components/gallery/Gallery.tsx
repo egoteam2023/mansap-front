@@ -4,6 +4,7 @@ import galleryList from './data.json'
 import { IGallery } from './type'
 import GalleryCard from './GalleryCard'
 import { useRef } from 'react'
+import SectionTitle from '../ui/section-title'
 
 function Gallery() {
   const ref = useRef<boolean>(true)
@@ -13,10 +14,10 @@ function Gallery() {
     dots: false,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     speed: 500,
-    slidesToShow: 3.4,
-    slidesToScroll: 3.4,
+    slidesToShow: 3.5,
+    slidesToScroll: 3.5,
     initialSlide: 0,
     afterChange: (current: number) => (ref.current = current === 0),
     responsive: [
@@ -38,7 +39,7 @@ function Gallery() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.5,
           slidesToScroll: 1,
         },
       },
@@ -47,15 +48,15 @@ function Gallery() {
 
   return (
     <section>
-      <div className="slider-container relative overflow-hidden mt-20">
-        <h2 className="pl-8 text-xl text-white font-bold">Галерея</h2>
+      <div className="slider-container relative overflow-hidden">
+        <SectionTitle title="Галерея" />
         <Slider className="mt-10" {...settings}>
           {(galleryList as IGallery[]).map((el, idx) => (
             <div
               key={`gallery_${el.id}`}
               className={`gallery-item duration-300 ${ref.current && idx === 0 ? 'pl-8' : 'pl-4'}`}
             >
-              <GalleryCard gallery={el} idx={idx} />
+              <GalleryCard gallery={el} />
             </div>
           ))}
         </Slider>
