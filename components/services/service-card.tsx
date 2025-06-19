@@ -16,7 +16,7 @@ export default function ServiceCard({ data }: ServiceCardProps) {
 
       <div className="relative z-10 h-full flex items-center justify-center px-6 text-white font-philosopher container">
         <div className="flex items-center gap-10 max-w-[90%] w-full justify-center">
-          <p className="italic text-3xl text-right w-1/3">{data.title}</p>
+          <p className="italic text-3xl text-right w-1/3 break-words">{data.title}</p>
 
           <svg
             className="shrink-0"
