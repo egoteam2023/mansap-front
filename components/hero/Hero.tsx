@@ -10,17 +10,7 @@ export function Hero() {
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.heroTitle}>
-        <Image width={400} height={180} src="/logo.svg" alt="logo" />
-        <div className={styles.heroTitleText}>
-          <p className={styles.heroTitleTextHighlight}>приватные кабинеты</p>
-          <span>
-            для лиц принимающих
-            <br /> важные решения
-          </span>
-        </div>
-      </div>
-      <div className={styles.heroSliderContainer}>
-        <HeroSlider />
+        <Image width={400} height={180} src="/logo.svg" alt="logo" priority />
       </div>
     </section>
   )
