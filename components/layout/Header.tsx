@@ -9,8 +9,15 @@ export function Header() {
     <header className="fixed left-0 top-0 w-full z-50 bg-header shadow-md">
       <div className="container h-20 flex items-center justify-between py-4 px-5 font-manrope">
         <Link href="#hero">
-          <Image src="/logo.svg" alt="mansap" width={140} height={36} />
+          <Image
+            src="/logo.svg"
+            alt="mansap"
+            width={140}
+            height={36}
+            className="w-[90px] md:w-[140px]"
+          />
         </Link>
+
         <nav className="max-sm:hidden flex items-center gap-10">
           <Link
             className="text-sm text-slate-200 hover:text-slate-200/80 duration-300"

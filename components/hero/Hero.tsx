@@ -5,13 +5,23 @@ import { Carousel } from 'antd'
 import { heroData } from './hero.data'
 import { useRef } from 'react'
 import { CarouselRef } from 'antd/es/carousel'
+import { SlideInSection } from '../animation/SlideInSection'
 
 export function Hero() {
   return (
     <section id="hero" className={styles.hero}>
-      <div className={styles.heroTitle}>
-        <Image width={400} height={180} src="/logo.svg" alt="logo" priority />
-      </div>
+      <SlideInSection side="bottom">
+        <div className={styles.heroTitle}>
+          <Image
+            width={400}
+            height={180}
+            src="/logo.svg"
+            alt="logo"
+            priority
+            className="w-[250px] md:w-full"
+          />
+        </div>
+      </SlideInSection>
     </section>
   )
 }

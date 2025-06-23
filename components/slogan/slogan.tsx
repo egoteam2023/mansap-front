@@ -13,12 +13,12 @@ export function Slogan() {
             src="/Vector1.svg"
             alt="logo"
             priority
-            className="w-[67px] sm:w-[190px]"
+            className="w-[50px] sm:w-[190px]"
           />
         </div>
-        <div className="max-w-xl text-center sm:text-left">
+        <div className=" text-center sm:text-left">
           <SlideInSection offset={30} side="bottom">
-            <p className="text-white italic text-2xl sm:text-3xl lg:text-4xl">
+            <p className="text-white italic text-xl sm:text-3xl lg:text-4xl">
               Приватные кабинеты для лиц принимающих важные решения
             </p>
           </SlideInSection>
@@ -30,7 +30,7 @@ export function Slogan() {
             src="/Vector2.svg"
             alt="logo"
             priority
-            className="w-[67px] sm:w-[190px]"
+            className="w-[50px] sm:w-[190px]"
           />
         </div>
       </div>
