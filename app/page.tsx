@@ -5,6 +5,7 @@ import Services from '@/components/services/Services'
 import Founders from '@/components/founders/Founders'
 import { Slogan } from '@/components/slogan/slogan'
 import Location from '@/components/location/location'
+import { Footer } from '@/components/layout/Footer'
 
 export default function Home() {
   return (

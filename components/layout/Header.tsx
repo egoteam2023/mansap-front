@@ -14,15 +14,16 @@ export function Header() {
         <nav className="max-sm:hidden flex items-center gap-10">
           <Link
             className="text-sm text-slate-200 hover:text-slate-200/80 duration-300"
-            href="#about-us"
-          >
-            О нас
-          </Link>
-          <Link
-            className="text-sm text-slate-200 hover:text-slate-200/80 duration-300"
             href="#benifits"
           >
             Преимущества
+          </Link>
+
+          <Link
+            className="text-sm text-slate-200 hover:text-slate-200/80 duration-300"
+            href="#location"
+          >
+            Локация
           </Link>
           <Link
             className="text-sm text-slate-200 hover:text-slate-200/80 duration-300"
