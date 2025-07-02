@@ -5,7 +5,7 @@ import { SlideInSection } from '../animation/SlideInSection'
 
 function Services() {
   return (
-    <section>
+    <section id="benifits">
       <div className="flex flex-col gap-10">
         {servicesData.length > 0 &&
           servicesData.map((service, index) => {
