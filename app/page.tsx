@@ -5,7 +5,7 @@ import Services from '@/components/services/Services'
 import Founders from '@/components/founders/Founders'
 import { Slogan } from '@/components/slogan/slogan'
 import Location from '@/components/location/location'
-import { Footer } from '@/components/layout/Footer'
+import WhatsappButton from '@/components/whatsappButton/WhatsappButton'
 
 export default function Home() {
   return (
@@ -19,6 +19,7 @@ export default function Home() {
         <Founders />
         <Feedback />
       </div>
+      <WhatsappButton/>
     </main>
   )
 }
