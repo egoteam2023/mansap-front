@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export function Header() {
   return (
-    <header className="fixed left-0 top-0 w-full z-50 bg-header shadow-md">
+    <header className="fixed left-0 top-0 w-full z-[10000] bg-header shadow-md">
       <div className="container h-20 flex items-center justify-between py-4 px-5 font-manrope">
         <Link href="#hero">
           <Image

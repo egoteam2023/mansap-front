@@ -36,7 +36,7 @@ function Founders() {
               <Image src="/founder2.png" alt="image" width={500} height={500} />
             </div>
             <div className="text-center flex flex-col items-center ">
-              <p className="font-semibold text-xl">Замир Чаргынов</p>
+              <p className="font-semibold text-xl">Дастан Чаргынов</p>
               <p className="font-light md:text-xl">Учредитель и гендиректор</p>
             </div>
           </div>

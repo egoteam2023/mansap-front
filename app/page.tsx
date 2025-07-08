@@ -4,8 +4,8 @@ import { Hero } from '@/components/hero/Hero'
 import Services from '@/components/services/Services'
 import Founders from '@/components/founders/Founders'
 import { Slogan } from '@/components/slogan/slogan'
-import Location from '@/components/location/location'
 import WhatsappButton from '@/components/whatsappButton/WhatsappButton'
+import RootLocation from '@/components/location/root'
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         <Slogan />
         <Services />
         <Gallery />
-        <Location />
+        <RootLocation />
         <Founders />
         <Feedback />
       </div>

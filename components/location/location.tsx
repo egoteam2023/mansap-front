@@ -1,7 +1,10 @@
-import Image from 'next/image'
-import Button from '../ui/button'
+'use client'
 import SectionTitle from '../ui/section-title'
-import { SlideInSection } from '../animation/SlideInSection'
+import dynamic from 'next/dynamic'
+
+const LocationMap = dynamic(() => import('@/components/location/map'), {
+  ssr: false,
+})
 
 export default function Location() {
   return (
@@ -12,8 +15,13 @@ export default function Location() {
       ></div>
       <div className="flex flex-col gap-10">
         <SectionTitle title="Локация" />
-        <div className="relative z-10 flex flex-col md:flex-row justify-between gap-6 items-center ">
-          <SlideInSection side="left">
+        <LocationMap
+          lat={42.853148}
+          lng={74.610213}
+          address="г. Бишкек, Байтик Баатыра, 25"
+          key={`map-${42.853148}-${74.610213}`}
+        />
+        {/* <SlideInSection side="left">
             <div className="flex flex-col gap-5 text-white font-manrope w-[300px]">
               <p className="text-base">
                 Ваш тихий и рабочий уголок будет находиться в центре делового
@@ -26,7 +34,7 @@ export default function Location() {
                 Узнать цену
               </Button>
             </div>
-          </SlideInSection>
+          </SlideInSection>з
           <SlideInSection side="right">
             <div className="flex flex-col items-center gap-5">
               <Image
@@ -43,8 +51,7 @@ export default function Location() {
                 Узнать цену
               </Button>
             </div>
-          </SlideInSection>
-        </div>
+          </SlideInSection> */}
       </div>
     </section>
   )
