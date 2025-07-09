@@ -36,7 +36,7 @@ export function BurgerOverlay({
   const handleClose = () => setIsOpenMenu(false)
   return (
     <div
-      className={`fixed top-0 backdrop-blur-2xl bg-black/40 left-0 duration-300 overflow-hidden h-screen flex items-center z-10 justify-center ${isOpenMenu ? 'w-full' : 'w-0'}`}
+      className={`fixed top-0 backdrop-blur-2xl bg-black/40 left-0 duration-300 overflow-hidden h-screen flex items-center z-[1000] justify-center ${isOpenMenu ? 'w-full' : 'w-0'}`}
     >
       <nav className="flex flex-col items-center gap-10">
         <Link
