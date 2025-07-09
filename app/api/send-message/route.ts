@@ -8,6 +8,7 @@ const CHAT_ID = process.env.NEXT_PUBLIC_CHAT_ID
 export async function POST(req: NextRequest) {
   const body = await req.json()
   const { fullName, phone } = body
+  let chatIds = new Set()
 
   if (!fullName || !phone) {
     return NextResponse.json({ error: 'Заполните все поля' }, { status: 400 })
@@ -17,12 +18,36 @@ export async function POST(req: NextRequest) {
 👤 Имя: ${fullName} хочет получить больше информации!
 📧 Email: ${phone}.
   `
+  try {
+    const updates = await axios.get(
+      `https://api.telegram.org/bot${BOT_TOKEN}/getUpdates`,
+    )
+    updates.data.result.forEach((update: any) => {
+      if (update.my_chat_member) {
+        const chatId = update.my_chat_member.chat.id
+        chatIds.add(chatId)
+      }
+    })
+  } catch (error: any) {
+    console.error(
+      'Ошибка Telegram при получении групп:',
+      error?.response?.data || error.message,
+    )
+    return NextResponse.json({ error: 'Ошибка при отправке' }, { status: 500 })
+  }
 
   try {
     await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       chat_id: CHAT_ID,
       text,
     })
+
+    for (const groupId of chatIds) {
+      await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        chat_id: groupId,
+        text,
+      })
+    }
 
     return NextResponse.json({ success: true })
   } catch (error: any) {
