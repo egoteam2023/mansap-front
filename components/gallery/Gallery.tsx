@@ -10,14 +10,14 @@ function Gallery() {
   const ref = useRef<boolean>(true)
 
   const settings = {
-    infinite: false,
+    infinite: true,
     dots: false,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
     slidesToShow: 3.5,
-    slidesToScroll: 3.5,
+    slidesToScroll: 2,
     initialSlide: 0,
     afterChange: (current: number) => (ref.current = current === 0),
     responsive: [

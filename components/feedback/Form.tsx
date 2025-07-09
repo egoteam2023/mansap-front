@@ -2,7 +2,7 @@
 import Input from '../ui/input'
 import Button from '../ui/button'
 import { z } from 'zod'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const formSchema = z.object({
   fullName: z.string().min(1, 'Заполните поле'),
@@ -24,24 +24,26 @@ function FeedbackForm() {
     fullName: '',
     phone: '',
   })
-  const [resError, setResError] = useState<string>()
+  const [resMessage, setMessage] = useState({
+    res: true,
+    message: '',
+  })
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>(
     {},
   )
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = (key: keyof FormData, value: any) => {
     setFormState((prev) => ({ ...prev, [key]: value }))
-    console.log([key], value)
   }
 
-  console.log(formState)
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const result = formSchema.safeParse(formState)
 
     if (result.success) {
       setErrors({})
-
+      setIsLoading(true)
       try {
         const res = await fetch('/api/send-message', {
           method: 'POST',
@@ -49,17 +51,27 @@ function FeedbackForm() {
           body: JSON.stringify(result.data),
         })
         if (res.ok) {
-          setResError('')
+          setMessage({
+            res: true,
+            message: 'Данные успешно отправлены!',
+          })
           setFormState({ fullName: '', phone: '' })
         } else {
-          setResError('Ошибка при отправке')
+          setMessage({
+            res: false,
+            message: 'Ошибка при отправке!',
+          })
         }
       } catch (e) {
         console.error(e)
-        setResError('Ошибка')
+        setMessage({
+          res: false,
+          message: 'Ошибка при отправке!',
+        })
+      } finally {
+        setIsLoading(false)
       }
     } else {
-      console.log('error')
       const errs: any = {}
       result.error.errors.forEach((err) => {
         const field = err.path[0] as keyof FormData
@@ -68,6 +80,16 @@ function FeedbackForm() {
       setErrors(errs)
     }
   }
+
+  useEffect(() => {
+    if (resMessage.message) {
+      const timer = setTimeout(() => {
+        setMessage({ res: true, message: '' })
+      }, 3000)
+
+      return () => clearTimeout(timer)
+    }
+  }, [resMessage.message])
 
   return (
     <div className="rounded-2xl p-[60px] bg-black/30 backdrop-blur-md shadow-lg w-full mobile:w-custom300 sm:w-custom400 lg:w-custom500 xl:w-custom600 flex flex-col gap-5">
@@ -100,10 +122,14 @@ function FeedbackForm() {
               </div>
             )
           })}
-          {resError && <p style={{ color: 'red' }}>{resError}</p>}
+          {resMessage.message && (
+            <p style={{ color: resMessage.res ? 'green' : 'red' }}>
+              {resMessage.message}
+            </p>
+          )}
         </div>
-        <Button type="submit" variant="primary-red">
-          Отправить
+        <Button type="submit" variant="primary-red" disabled={isLoading}>
+          {isLoading ? 'Отправка...' : 'Отправить'}
         </Button>
       </form>
     </div>

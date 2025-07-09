@@ -15,8 +15,8 @@ export async function POST(req: NextRequest) {
   }
 
   const text = `
-👤 Имя: ${fullName} хочет получить больше информации!
-📧 Email: ${phone}.
+👤 Имя: ${fullName} хочет получить планировки!
+📧 Номер телефона: ${phone}.
   `
   try {
     const updates = await axios.get(

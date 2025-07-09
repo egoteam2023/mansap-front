@@ -11,28 +11,28 @@ const servicesData: IService[] = [
     title: 'Представительский этаж',
     description:
       'Эксклюзивный этаж с ограниченным доступом, только по приглашению',
-    image: '/service1.png',
+    image: '/gallery/service1.png',
   },
   {
     id: 2,
     title: 'Сейфовые ячейки',
     description:
       'Для хранения важных контрактов, активов или денежных средств в безопасности',
-    image: '/service2.png',
+    image: '/gallery/service2.png',
   },
   {
     id: 3,
     title: 'Отдельный ресепшн',
     description:
       'Ваших гостей встречает администратор прямо на этаже — без очередей и ожиданий',
-    image: '/service3.png',
+    image: '/gallery/service3.png',
   },
   {
     id: 4,
     title: 'Переговорные комнаты',
     description:
       'Переговорные комнаты для продуктивных встреч и мероприятий',
-    image: '/service4.png',
+    image: '/gallery/service4.png',
   }
 ]
 
