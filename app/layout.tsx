@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header'
 import type { Metadata } from 'next'
 import { Manrope, Philosopher } from 'next/font/google'
 import '@/styles/global.css'
+import { setup } from '@/db/initTable'
 
 export const metadata: Metadata = {
   title: 'Mansap',
@@ -22,11 +23,12 @@ const philosopher = Philosopher({
   display: 'swap',
   variable: '--font-philosopher',
 })
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode
 }>) {
+  await setup()
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${philosopher.variable}`}>
