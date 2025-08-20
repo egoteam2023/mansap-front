@@ -1,7 +1,7 @@
 // app/api/sendMessage/route.ts
 import { NextResponse } from "next/server";
 import axios from "axios";
-import { getAllChatIds } from "../telegram/webhook/route";
+import { getGroups } from "@/db/db";
 
 const BOT_TOKEN = process.env.NEXT_PUBLIC_BOT_TOKEN!;
 const CHAT_ID = process.env.NEXT_PUBLIC_CHAT_ID!;
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
     });
 
     // Отправляем во все сохранённые чаты
-    const chatIds = await getAllChatIds();
+    const chatIds = await getGroups();
     for (const id of chatIds) {
       try {
         await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
