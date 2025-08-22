@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { Manrope, Philosopher } from 'next/font/google'
 import '@/styles/global.css'
 import { setup } from '@/db/initTable'
+import YandexMetrika from '@/components/yandex/yandex-metrika'
 
 export const metadata: Metadata = {
   title: 'Mansap',
@@ -35,6 +36,7 @@ export default async function RootLayout({
         <Header />
         {children}
         <Footer />
+        <YandexMetrika />
       </body>
     </html>
   )
